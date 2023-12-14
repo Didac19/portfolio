@@ -32,6 +32,7 @@ const menuItems = [
 ]
 const Header = ({ name, lastName }) => {
     const [activeItem, setActiveItem] = useState(menuItems[0].name);
+
     return (
         <header className="flex h-20 w-full items-center px-4 md:px-12 justify-between z-10 backdrop-blur-md fixed">
             <div className="w-[150px]">
@@ -45,7 +46,7 @@ const Header = ({ name, lastName }) => {
                             <ul className='mt-4 flex flex-col'>
                                 {
                                     menuItems.map((item, index) => (
-                                        <Link key={index} className='w-full text-start text-md font-medium transition-colors hover:text-gray-500 px-4 py-2 hover:bg-[#dae8ff]' href={item.href} onClick={() => setActiveItem(item.name)}>
+                                        <Link key={index} onClick={() => setActiveItem(item.name)} className={`text-lg font-medium transition-colors px-4 py-2 hover:bg-[#dae8ff] rounded-md${item.name === activeItem ? 'text-gray-500 bg-[#dae8ff] rounded-md' : ''}`} href={item.href}>
                                             {item.name}
                                         </Link>
                                     ))
