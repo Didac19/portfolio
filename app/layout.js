@@ -1,6 +1,10 @@
-import { Inter } from 'next/font/google'
 import './globals.css'
-
+import { Roboto, Inter, Preahvihear } from 'next/font/google'
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+})
+const preavihear = Preahvihear({ subsets: ['khmer'], weight: '400' })
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -11,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={preavihear.className}>{children}</body>
     </html>
   )
 }
