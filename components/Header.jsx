@@ -37,7 +37,7 @@ const Header = ({ name, lastName }) => {
             <div className="w-[150px]">
                 <h1 className="text-xl font-bold">{name} {lastName}</h1>
             </div>
-            <div className='md:hidden'>
+            <div className='lg:hidden'>
                 <Sheet>
                     <SheetTrigger><Menu /></SheetTrigger>
                     <SheetContent side='left' className="w-[60%] text-start text-[#5640e7]">
@@ -45,7 +45,7 @@ const Header = ({ name, lastName }) => {
                             <ul className='mt-4 flex flex-col'>
                                 {
                                     menuItems.map((item, index) => (
-                                        <Link key={index} className='w-full text-start text-md font-medium transition-colors hover:text-gray-500 px-4 py-2 hover:bg-[#dae8ff]' href={item.href}>
+                                        <Link key={index} className='w-full text-start text-md font-medium transition-colors hover:text-gray-500 px-4 py-2 hover:bg-[#dae8ff]' href={item.href} onClick={() => setActiveItem(item.name)}>
                                             {item.name}
                                         </Link>
                                     ))
@@ -55,7 +55,7 @@ const Header = ({ name, lastName }) => {
                     </SheetContent>
                 </Sheet>
             </div>
-            <div className="md:flex hidden">
+            <div className="lg:flex hidden">
                 <nav
                     aria-label="Main"
                     data-orientation="horizontal"
