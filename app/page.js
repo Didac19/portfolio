@@ -1,4 +1,3 @@
-import ExpCard from '@/components/ExpCard'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Reveal from '@/components/Reveal'
@@ -23,7 +22,10 @@ export default function Home() {
           <ExpSection />
         </Reveal>
       </main >
-      <Footer />
+      <Reveal>
+        <Footer />
+      </Reveal>
+
     </div >
 
   )

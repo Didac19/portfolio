@@ -3,7 +3,7 @@ import React from 'react'
 import { CiMail } from "react-icons/ci";
 const Footer = () => {
     return (
-        <footer className="w-full py-56" id='contact'>
+        <footer className="w-full py-52" id='contact'>
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row items-center justify-center">
                     <div className="mb-6 md:mb-0 text-center text-xl">

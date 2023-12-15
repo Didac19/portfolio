@@ -3,7 +3,6 @@ import React from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from './ui/button'
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaPhp, FaPython } from "react-icons/fa";
 import ViewButton from './ViewButton'
@@ -12,7 +11,7 @@ export const ExpSection = () => {
         <section id="exp" className='mb-4 py-8'>
             <h2 className="text-2xl font-bold mt-12 mb-6">Experience</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="bg-gradient-to-b from-[#b7b9fb] to-[#5640e7] text-[#d7d9fd] p-4">
+                <Card className="bg-gradient-to-b from-[#b7b9fb] to-[#5640e7] text-[#d7d9fd] py-10">
                     <CardHeader>
                         <CardTitle>Reactiva</CardTitle>
                     </CardHeader>
@@ -26,18 +25,19 @@ export const ExpSection = () => {
 }
 export const AboutSection = () => {
     return (
-        <section id='about' className='lg:px-60 lg:py-40 px-12 py-24'>
+        <section id='about' className='lg:px-44 lg:py-40 px-12 py-24'>
             <h1 className='text-4xl'>
-                Hey, I&apos;m Diego. <span className='text-[#8bb2ff]'>Junior web developer</span>
+                Hey, I&apos;m Diego.
             </h1>
-            <p className='text-xl mt-4'>
+            <p className=' text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#8bb2ff] to-slate-300 leading-10'>Junior web developer</p>
+            <p className='text-2xl mt-4'>
                 I am a junior software developer passionate about programming and learning. I enjoy creating innovative and efficient solutions to problems faced by users and clients. I have experience in web development with HTML, CSS, JavaScript, PHP and frameworks like React, Next JS and Laravel. I have also worked with SQL and NoSQL databases, as well as version control tools like Git and GitHub. I consider myself a responsible, creative and proactive professional, always looking to improve my skills and knowledge.
             </p>
         </section>
     )
 }
 export const ProjectSection = () => {
-    return <section id='projects' className='py-8'>
+    return <section id='projects' className='py-24 mt-6'>
         <h2 className="text-2xl font-bold mb-6">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <Card className="bg-gradient-to-b from-[#b7b9fb] to-[#5640e7] text-[#d7d9fd]">
