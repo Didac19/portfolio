@@ -1,11 +1,12 @@
-import exp from 'constants'
-import React from 'react'
+"use client"
+import React, { useRef } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaPhp, FaPython } from "react-icons/fa";
 import ViewButton from './ViewButton'
+import { TypeAnimation } from 'react-type-animation';
 export const ExpSection = () => {
     return (
         <section id="exp" className='mb-4 py-8'>
@@ -29,10 +30,21 @@ export const AboutSection = () => {
             <h1 className='text-4xl'>
                 Hey, I&apos;m Diego.
             </h1>
-            <p className=' text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#8bb2ff] to-slate-300 leading-10'>Junior web developer</p>
-            <p className='text-2xl mt-4'>
+            <p className=' text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#8bb2ff] to-slate-300 leading-10 mb-5'>Junior web developer</p>
+            <TypeAnimation
+                sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    'I am a junior software developer passionate about programming and learning. I enjoy creating innovative and efficient solutions to problems faced by users and clients. I have experience in web development with HTML, CSS, JavaScript, PHP and frameworks like React, Next JS and Laravel. I have also worked with SQL and NoSQL databases, as well as version control tools like Git and GitHub. I consider myself a responsible, creative and proactive professional, always looking to improve my skills and knowledge.',
+                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                ]}
+                wrapper="span"
+                speed={80}
+                style={{ fontSize: '1.5rem', display: 'inline-block' }}
+                repeat={Infinity}
+            />
+            {/* <p className='text-2xl mt-4'>
                 I am a junior software developer passionate about programming and learning. I enjoy creating innovative and efficient solutions to problems faced by users and clients. I have experience in web development with HTML, CSS, JavaScript, PHP and frameworks like React, Next JS and Laravel. I have also worked with SQL and NoSQL databases, as well as version control tools like Git and GitHub. I consider myself a responsible, creative and proactive professional, always looking to improve my skills and knowledge.
-            </p>
+            </p> */}
         </section>
     )
 }
