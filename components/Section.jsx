@@ -30,7 +30,7 @@ export const AboutSection = () => {
     return (
         <section id='about' className='space-y-6 lg:px-44 lg:py-40 px-12 py-24'>
             <h1 className='text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8bb2ff] to-[#5640e7]'>
-                Hey, I'm Diego.
+                Hey, I&apos;m Diego.
             </h1>
             <p className='text-3xl text-[#8bb2ff]'>Junior web developer</p>
             <Card className="bg-gradient-to-br from-[#1a237e] to-[#3949ab] text-white shadow-lg hover:shadow-xl transition-all duration-300">
