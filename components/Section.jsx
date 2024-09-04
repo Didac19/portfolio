@@ -1,148 +1,155 @@
 "use client"
-import React, { useRef } from 'react'
+import React from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
 import Image from 'next/image'
-import Link from 'next/link'
-import { IoLogoJavascript } from "react-icons/io5";
-import { FaPhp, FaPython } from "react-icons/fa";
+import { IoLogoJavascript, IoLogoPython, IoLogoReact, IoLogoNodejs } from "react-icons/io5"
+import { FaPhp, FaLaravel, FaDatabase } from "react-icons/fa"
+import { SiTypescript, SiTailwindcss, SiExpress, SiNextdotjs, SiPostgresql, SiMysql, SiPrisma, SiSequelize } from "react-icons/si"
 import ViewButton from './ViewButton'
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from 'react-type-animation'
+
 export const ExpSection = () => {
     return (
-        <section id="exp" className='mb-4 py-8'>
-            <h2 className="text-2xl font-bold mt-12 mb-6">Experience</h2>
+        <section id="exp" className='space-y-6'>
+            <h2 className="text-3xl font-bold text-[#8bb2ff]">Experience</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="bg-gradient-to-b from-[#b7b9fb] to-[#5640e7] text-[#d7d9fd] py-10">
+                <Card className="bg-gradient-to-br from-[#1a237e] to-[#3949ab] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <CardHeader>
-                        <CardTitle>Reactiva</CardTitle>
+                        <CardTitle className="text-2xl font-bold">Reactiva</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <CardDescription className="text-[#d7d9fd]">6 months working as a web developer</CardDescription>
+                        <CardDescription className="text-[#b3e5fc] text-lg">Spearheaded the design and implementation of bespoke web applications tailored to meet the company&apos;s unique specifications, ensuring a seamless and functional user experience. Leveraged advanced proficiency in Python and SQL for robust data analysis, optimizing operations and informing strategic decisions through insightful data interpretation and management.</CardDescription>
                     </CardContent>
                 </Card>
             </div>
         </section>
     )
 }
+
 export const AboutSection = () => {
     return (
-        <section id='about' className='lg:px-44 lg:py-40 px-12 py-24'>
-            <h1 className='text-4xl'>
-                Hey, I&apos;m Diego.
+        <section id='about' className='space-y-6 lg:px-44 lg:py-40 px-12 py-24'>
+            <h1 className='text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8bb2ff] to-[#5640e7]'>
+                Hey, I'm Diego.
             </h1>
-            <p className=' text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#8bb2ff] to-slate-300 leading-10 mb-5'>Junior web developer</p>
-            <TypeAnimation
-                sequence={[
-                    // Same substring at the start will only be typed out once, initially
-                    'I am a junior software developer passionate about programming and learning. I enjoy creating innovative and efficient solutions to problems faced by users and clients. I have experience in web development with HTML, CSS, JavaScript, PHP and frameworks like React, Next JS and Laravel. I have also worked with SQL and NoSQL databases, as well as version control tools like Git and GitHub. I consider myself a responsible, creative and proactive professional, always looking to improve my skills and knowledge.',
-                    1000, // wait 1s before replacing "Mice" with "Hamsters"
-                ]}
-                wrapper="span"
-                speed={80}
-                style={{ fontSize: '1.5rem', display: 'inline-block' }}
-                repeat={Infinity}
-            />
-            {/* <p className='text-2xl mt-4'>
-                I am a junior software developer passionate about programming and learning. I enjoy creating innovative and efficient solutions to problems faced by users and clients. I have experience in web development with HTML, CSS, JavaScript, PHP and frameworks like React, Next JS and Laravel. I have also worked with SQL and NoSQL databases, as well as version control tools like Git and GitHub. I consider myself a responsible, creative and proactive professional, always looking to improve my skills and knowledge.
-            </p> */}
+            <p className='text-3xl text-[#8bb2ff]'>Junior web developer</p>
+            <Card className="bg-gradient-to-br from-[#1a237e] to-[#3949ab] text-white shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6">
+                    <TypeAnimation
+                        sequence={[
+                            'I am a junior software developer passionate about programming and learning. I enjoy creating innovative and efficient solutions to problems faced by users and clients. I have experience in web development with HTML, CSS, JavaScript, PHP and frameworks like React, Next JS and Laravel. I have also worked with SQL and NoSQL databases, as well as version control tools like Git and GitHub. I consider myself a responsible, creative and proactive professional, always looking to improve my skills and knowledge.',
+                            1000,
+                        ]}
+                        wrapper="p"
+                        speed={80}
+                        style={{ fontSize: '1.25rem', lineHeight: '1.75rem' }}
+                        repeat={Infinity}
+                        className="text-[#b3e5fc]"
+                    />
+                </CardContent>
+            </Card>
         </section>
     )
 }
+
 export const ProjectSection = () => {
-    return <section id='projects' className='py-24 mt-6'>
-        <h2 className="text-2xl font-bold mb-6">Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <Card className="bg-gradient-to-b from-[#b7b9fb] to-[#5640e7] text-[#d7d9fd]">
-                <CardContent className="backdrop-blur-md m-4">
-                    <Image src="/shiny.png" alt='' width={500} height={500} className='w-full hover:scale-110 transition-transform rounded-md' />
-                </CardContent>
-                <CardHeader>
-                    <CardTitle className="text-2xl text-start">Shiny Desk</CardTitle>
-                </CardHeader>
-                <CardFooter className='flex flex-col items-start'>
-                    <CardDescription className='mb-2 text-[#d7d9fd] text-md'>A web application designed for dentists. It enables them to schedule appointments, manage patients, and use odontograms</CardDescription>
-                    <ViewButton name="ShinyDesk" url="https://shinydesk.vercel.app/auth/login" />
-                </CardFooter>
-            </Card>
-            <Card className="bg-gradient-to-b from-[#b7b9fb] to-[#5640e7] text-[#d7d9fd]">
-                <CardContent className="backdrop-blur-md m-4">
-                    <Image src="/genius.png" alt='' width={500} height={500} className='w-full hover:scale-110 transition-transform rounded-md' />
-                </CardContent>
-                <CardHeader>
-                    <CardTitle className="text-2xl text-start">AI SaaS</CardTitle>
-                </CardHeader>
-                <CardFooter className='flex flex-col items-start'>
-                    <CardDescription className='mb-2 text-[#d7d9fd] text-md'>Web application using Open Ai and Replicate API</CardDescription>
-                    <ViewButton name="AI SaaS" url="#" />
-                </CardFooter>
-            </Card>
-            <Card className="bg-gradient-to-b from-[#b7b9fb] to-[#5640e7] text-[#d7d9fd]">
-                <CardContent className="backdrop-blur-md m-4">
-                    <Image src="/blog-app.png" alt='' width={500} height={500} className='w-full hover:scale-110 transition-transform rounded-md' />
-                </CardContent>
-                <CardHeader>
-                    <CardTitle className="text-2xl text-start">Blog</CardTitle>
-                </CardHeader>
-                <CardFooter className='flex flex-col items-start'>
-                    <CardDescription className='mb-2 text-[#d7d9fd] text-md'>Simple blog applicatioon with image upload</CardDescription>
-                    <ViewButton name="Blog" url="#" />
-                </CardFooter>
-            </Card>
-        </div>
-    </section>
-}
-export const SkillSection = () => {
-    return <section id="skills" className='py-8'>
-        <h2 className="text-2xl font-bold mt-12 mb-6">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* <SkillCard title="Programming Languages" description='' /> */}
-            <Card className="bg-gradient-to-b from-[#b7b9fb] to-[#5640e7] text-[#d7d9fd]">
-                <CardHeader>
-                    <CardTitle>Programming Languages</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <div className='grid grid-cols-3 gap-3'>
-                        <IoLogoJavascript className='w-full h-full' />
-                        <FaPhp className='w-full h-full' />
-                        <FaPython className='w-full h-full' />
-                    </div>
-                </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-b from-[#b7b9fb] to-[#5640e7] text-[#d7d9fd]">
-                <CardHeader>
-                    <CardTitle>Frameworks & libraries</CardTitle>
-                </CardHeader>
-                <CardContent className="grid grid-cols-2">
-                    <ul className='list-none'>
-                        <li>Next JS</li>
-                        <li>Laravel</li>
-                        <li>React</li>
-                        <li>Express</li>
-                        <li>Node JS</li>
-                        <li>Tailwind CSS</li>
-                        <li>Typescript</li>
-                    </ul>
-                    <ul>
-                        <p className='text-[#5640e7]'>Other skills</p>
-                        <li>Cloudinary</li>
-                        <li>Resend</li>
-                    </ul>
-                </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-b from-[#b7b9fb] to-[#5640e7] text-[#d7d9fd]">
-                <CardHeader>
-                    <CardTitle>Databases</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <ul className='list-none'>
-                        <li>PostgreSQL</li>
-                        <li>MySQL</li>
-                        <li>Prisma</li>
-                        <li>Sequelize</li>
-                    </ul>
-                </CardContent>
-            </Card>
-        </div>
-    </section>
+    return (
+        <section id='projects' className='space-y-6'>
+            <h2 className="text-3xl font-bold text-[#8bb2ff]">Projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <ProjectCard
+                    image="/shiny.png"
+                    title="Shiny Desk"
+                    description="A web application designed for dentists. It enables them to schedule appointments, manage patients, and use odontograms"
+                    url="https://shinydesk.vercel.app/auth/login"
+                />
+                <ProjectCard
+                    image="/genius.png"
+                    title="AI SaaS"
+                    description="Web application using Open Ai and Replicate API"
+                    url="#"
+                />
+                <ProjectCard
+                    image="/blog-app.png"
+                    title="Blog"
+                    description="Simple blog application with image upload"
+                    url="#"
+                />
+            </div>
+        </section>
+    )
 }
 
+const ProjectCard = ({ image, title, description, url }) => (
+    <Card className="bg-gradient-to-br from-[#1a237e] to-[#3949ab] text-white overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-1">
+        <CardContent className="p-0">
+            <div className="relative h-48 overflow-hidden">
+                <Image src={image} alt={title} layout="fill" objectFit="cover" className="group-hover:scale-110 transition-transform duration-300" />
+            </div>
+        </CardContent>
+        <CardHeader>
+            <CardTitle className="text-2xl font-bold">{title}</CardTitle>
+        </CardHeader>
+        <CardFooter className='flex flex-col items-start space-y-4'>
+            <CardDescription className='text-[#b3e5fc] text-md'>{description}</CardDescription>
+            <ViewButton name={title} url={url} />
+        </CardFooter>
+    </Card>
+)
+
+export const SkillSection = () => {
+    return (
+        <section id="skills" className='space-y-6'>
+            <h2 className="text-3xl font-bold text-[#8bb2ff]">Skills</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <SkillCard
+                    title="Programming Languages"
+                    skills={[
+                        { name: 'JavaScript', icon: IoLogoJavascript, color: 'text-yellow-400' },
+                        { name: 'PHP', icon: FaPhp, color: 'text-blue-400' },
+                        { name: 'Python', icon: IoLogoPython, color: 'text-green-400' },
+                        { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600' },
+                    ]}
+                />
+                <SkillCard
+                    title="Frameworks & Libraries"
+                    skills={[
+                        { name: 'React', icon: IoLogoReact, color: 'text-blue-500' },
+                        { name: 'Next.js', icon: SiNextdotjs, color: 'text-white' },
+                        { name: 'Laravel', icon: FaLaravel, color: 'text-red-500' },
+                        { name: 'Express', icon: SiExpress, color: 'text-green-500' },
+                        { name: 'Node.js', icon: IoLogoNodejs, color: 'text-green-600' },
+                        { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400' },
+                    ]}
+                />
+                <SkillCard
+                    title="Databases"
+                    skills={[
+                        { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400' },
+                        { name: 'MySQL', icon: SiMysql, color: 'text-orange-500' },
+                        { name: 'Prisma', icon: SiPrisma, color: 'text-teal-500' },
+                        { name: 'Sequelize', icon: SiSequelize, color: 'text-blue-600' },
+                    ]}
+                />
+            </div>
+        </section>
+    )
+}
+
+const SkillCard = ({ title, skills }) => (
+    <Card className="bg-gradient-to-br from-[#1a237e] to-[#3949ab] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+        <CardHeader>
+            <CardTitle className="text-2xl font-bold">{title}</CardTitle>
+        </CardHeader>
+        <CardContent>
+            <div className="grid grid-cols-2 gap-4">
+                {skills.map((skill, index) => (
+                    <div key={index} className="flex flex-col items-center space-y-2 group">
+                        <skill.icon className={`w-12 h-12 ${skill.color} transition-transform duration-300 ease-in-out group-hover:scale-110`} />
+                        <span className="text-sm font-medium text-center text-[#b3e5fc]">{skill.name}</span>
+                    </div>
+                ))}
+            </div>
+        </CardContent>
+    </Card>
+)
