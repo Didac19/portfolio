@@ -13,7 +13,7 @@ export const ExpSection = () => {
         <section id="exp" className='space-y-6'>
             <h2 className="text-3xl font-bold text-[#8bb2ff]">Experience</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="bg-gradient-to-br from-[#1a237e] to-[#3949ab] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <Card className="border-none bg-transparent text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <CardHeader>
                         <CardTitle className="text-2xl font-bold">Reactiva</CardTitle>
                     </CardHeader>
@@ -28,13 +28,13 @@ export const ExpSection = () => {
 
 export const AboutSection = () => {
     return (
-        <section id='about' className='space-y-6 lg:px-44 lg:py-40 px-12 py-24'>
+        <section id='about' className='space-y-6 lg:px-44 lg:py-40 px-4 py-24'>
             <h1 className='text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8bb2ff] to-[#5640e7]'>
                 Hey, I&apos;m Diego.
             </h1>
             <p className='text-3xl text-[#8bb2ff]'>Junior web developer</p>
-            <Card className="bg-gradient-to-br from-[#1a237e] to-[#3949ab] text-white shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
+            <Card className="bg-transparent border-none text-white shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardContent className="">
                     <TypeAnimation
                         sequence={[
                             'I am a junior software developer passionate about programming and learning. I enjoy creating innovative and efficient solutions to problems faced by users and clients. I have experience in web development with HTML, CSS, JavaScript, PHP and frameworks like React, Next JS and Laravel. I have also worked with SQL and NoSQL databases, as well as version control tools like Git and GitHub. I consider myself a responsible, creative and proactive professional, always looking to improve my skills and knowledge.',
@@ -42,7 +42,7 @@ export const AboutSection = () => {
                         ]}
                         wrapper="p"
                         speed={80}
-                        style={{ fontSize: '1.25rem', lineHeight: '1.75rem' }}
+                        style={{ fontSize: '1.15rem', lineHeight: '1.75rem' }}
                         repeat={Infinity}
                         className="text-[#b3e5fc]"
                     />
@@ -99,7 +99,7 @@ const ProjectCard = ({ image, title, description, url }) => (
 
 export const SkillSection = () => {
     return (
-        <section id="skills" className='space-y-6'>
+        <section id="skills" className='space-y-6 mt-4'>
             <h2 className="text-3xl font-bold text-[#8bb2ff]">Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <SkillCard
@@ -137,7 +137,7 @@ export const SkillSection = () => {
 }
 
 const SkillCard = ({ title, skills }) => (
-    <Card className="bg-gradient-to-br from-[#1a237e] to-[#3949ab] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+    <Card className="border-none bg-transparent text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
         <CardHeader>
             <CardTitle className="text-2xl font-bold">{title}</CardTitle>
         </CardHeader>
