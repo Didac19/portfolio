@@ -35,7 +35,7 @@ const Header = ({ name, lastName }) => {
     const [activeItem, setActiveItem] = useState('');
 
     return (
-        <header className="flex h-20 w-full items-center px-4 md:px-12 justify-between z-10 backdrop-blur-md fixed">
+        <header className="flex h-20 w-full items-center px-4 md:px-12 justify-between z-10 backdrop-blur-md fixed md:invisible">
             <div className="w-[150px]">
                 <h1 className="text-xl font-bold">{name} {lastName}</h1>
             </div>
